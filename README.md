@@ -1,32 +1,54 @@
-# APC2023
+# Age-Period-Cohort (APC2023)
+
 This is a github repository for the code used to get the results in the paper: "Trends in the incidence of mental disorders according to age, period, and birth cohort". (LINK)
 
 ## Functions
 
-| R-function            | Calculates                                   |
-| --------------------- | -------------------------------------------- |
-|          |           |
+Below is the R-functions created to make the analysis for the paper. 
+
+| R-function            | Calculates                                              |
+| --------------------- | ------------------------------------------------------- |
+| `IR_birth_cohort()`   | The incidence rate with respect to birth cohort         |
+| `IR_period()`         | The incidence rate with respect to calender period      |
+| `count_DY()`          | Count the number of cases and sums up the person-years  |
 
 ### Libraries used
 
 | Library       | Used in                                         |
 | ------------- | ----------------------------------------------- |
-|   |          |
+| Epi           | The functions and analysis                      |
+| popEpi        | The functions and analysis                      |
+| mgcv          | The functions and analysis                      |
+| ggplot2       | Creating the figures                            |
+| ggnewscale    | Creating the figures                            |
 
 At each of the R-scripts, the packages used in a function is listed. 
 
 ## Analysis
 
+The analysis is run in the file `Analysis.R`. Note that the code is written as an example for a given diagnosis of intrest denoted *DXX*. It might return an error or warning if the number of observations is too low to fit the model (GAM). If the counts and person-years still is of intrest use the function `count_DY()`. In the file `panel_figure.R` the code for creating the panel plots can be found. 
 
+The approach of the functions follows the approach described in the book: **Epidemioligy with R** - by *Bendix Carstensen*. 
 
+##### Birth cohorts 
 
+The birth cohort groups depends on the earliest age of onset (EAOO) for the diagnose of intrest. 
 
-Epidemioligy with R - Bendix Carstensen
+| EAOO | 1         | 5         |  10       | 
+| ---- | --------- | --------- | --------- |
+|      | 1924-1939 | 1924-1939 | 1924-1939 | 
+|      | 1940-1949 | 1940-1949 | 1940-1949 | 
+|      | 1950-1959 | 1950-1959 | 1950-1959 | 
+|      | 1960-1969 | 1960-1969 | 1960-1969 | 
+|      | 1970-1979 | 1970-1979 | 1970-1979 | 
+|      | 1980-1989 | 1980-1989 | 1980-1989 | 
+|      | 1990-1999 | 1990-1999 | 1990-1999 | 
+|      | 2000-2009 | 2000-2016 | 2000-2011 | 
+|      | 2010-2020 |        	 |           | 
+ 
+##### Calender period
 
-### Birth cohorts 
-
-### Calender period
-
+The calender periods chosen are as follows: [2004-2007), [2007-2010), [2010-2013), [2013-2016), [2016-2019), and [2019-2021).
 
 ## Description of input data 
 
