@@ -26,13 +26,13 @@ At each of the R-scripts, the packages used in a function is listed.
 
 ## Analysis
 
-The analysis is run in the file `Analysis.R`. Note that the code is written as an example for a given diagnosis of intrest denoted *DXX*. It might return an error or warning if the number of observations is too low to fit the model (GAM). If the counts and person-years still is of intrest use the function `count_DY()`. In the file `panel_figure.R` the code for creating the panel plots can be found. 
+The analysis is run in the file `Analysis.R`. Note that the code is written as an example for a given diagnosis of interest denoted *DXX*. It might return an error or warning if the number of observations is too low to fit the model (GAM). If the counts and person-years still is of interest use the function `count_DY()`. In the file `panel_figure.R` the code for creating the panel plots can be found. 
 
-The approach of the functions follows the approach described in the book: **Epidemioligy with R** - by *Bendix Carstensen*. 
+The methods used in the functions follows the approach described in the book: **Epidemioligy with R** - by *Bendix Carstensen*. 
 
 ##### Birth cohorts 
 
-The birth cohort groups depends on the earliest age of onset (EAOO) for the diagnose of intrest. 
+The birth cohort groups depends on the earliest age of onset (EAOO) for the diagnose of interest. 
 
 | EAOO | 1         | 5         |  10       | 
 | ---- | --------- | --------- | --------- |
@@ -44,7 +44,7 @@ The birth cohort groups depends on the earliest age of onset (EAOO) for the diag
 |      | 1980-1989 | 1980-1989 | 1980-1989 | 
 |      | 1990-1999 | 1990-1999 | 1990-1999 | 
 |      | 2000-2009 | 2000-2016 | 2000-2011 | 
-|      | 2010-2020 |        	 |           | 
+|      | 2010-2020 |         	 |           | 
  
 ##### Calender period
 
@@ -52,7 +52,7 @@ The calender periods chosen are as follows: [2004-2007), [2007-2010), [2010-2013
 
 ## Description of input data 
 
-The study looks at individuals who are alive and healthy in Denmark at the begining of 2004 or your 1'st, 5'th or 10'th birthday (Depending on the earliest age of onset of the diagnose) whatever comes later. The study ends at the end of 2021. After cleaning the data, there is a data-set for each diagnose of intrest and it has the following columns.
+The study looks at individuals who are alive and healthy in Denmark at the begining of 2004 or your 1'st, 5'th or 10'th birthday (Depending on the earliest age of onset of the diagnose) whatever comes later. The study ends at the end of 2021. After cleaning the data, there is a data-set for each diagnose of interest and it has the following columns.
 
 | Column number | Column name   | Description                                                                        |
 | ------------- | ------------- | ---------------------------------------------------------------------------------- |
