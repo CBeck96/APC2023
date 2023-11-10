@@ -158,14 +158,19 @@ count_DY <- function(dat, eaoo, start_year = 1924, effect = "BC"){
       dat_b <- dat[round(dat$doinc,2) < diag_cohort[i+1] & 
                      round(dat$doend,2) >=  diag_cohort[i], 
                    c(1,3,4,5,6)]
-      dat_b$censor_stat[round(dat_b$doend,2) > diag_cohort[i+1]] <- 0
+      # Setting start date
+      dat_b$doinc <- pmax(dat_b$doinc,diag_cohort[i])
+      # Setting end date
+      dat_bb <- dat_b
+      dat_bb$doend <- pmin(dat_b$doend,diag_cohort[i+1])
+      dat_bb$censor_stat[dat_bb$doend != dat_b$doend] <- 0
       # Transforms the data into lexis format
       Ldat <- Lexis(entry = list(age = doinc - dobth, per = doinc),
                     exit = list(per = doend),
                     exit.status = factor(censor_stat, 
                                          labels = c("Well", "Event",
                                                     "Emigration", "Dead")),
-                    data = dat_b)
+                    data = dat_bb)
       
       # Splits the data for counting cases and person-years
       b <- seq(eaoo,max_age,1)
