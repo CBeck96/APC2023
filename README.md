@@ -1,6 +1,6 @@
 # Age-Period-Cohort (APC2023)
 
-This is a github repository for the code used to get the results in the paper: "Trends in the incidence of mental disorders according to age, period, and birth cohort". (LINK)
+This is a github repository for the code used to get the results in the paper: "Trends in the incidence of mental disorders according to age, period, and birth cohort".  [Paper](doi:10.1001/jamapsychiatry.2024.3723)
 
 ## Functions
 
