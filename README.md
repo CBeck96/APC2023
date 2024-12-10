@@ -1,6 +1,6 @@
 # Age-Period-Cohort (APC2023)
 
-This is a github repository for the code used to get the results in the paper: "Mental Health Disorder Trends in Denmark According to Age, Calendar Period, and Birth Cohort".  [Paper](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2826278)
+This is a github repository for the code used to get the results in the paper: "Mental Health Disorder Trends in Denmark According to Age, Calendar Period, and Birth Cohort" published in JAMA Psychiatry. [Paper](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2826278)
 
 ## Functions
 
